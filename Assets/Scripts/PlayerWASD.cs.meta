@@ -1,2 +1,15 @@
 fileFormatVersion: 2
 guid: b01ef5574c9e54040abe9e4d1b3466f3
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - playerTransform: {fileID: 5235839245009407996, guid: d68c94f538d11f446b0d4333b01af034, type: 3}
+  - myScript: {fileID: 7773344216517285262, guid: d68c94f538d11f446b0d4333b01af034, type: 3}
+  - RB: {fileID: -370587067543557549, guid: d68c94f538d11f446b0d4333b01af034, type: 3}
+  - scoreText: {fileID: 8417602663059114214, guid: be56fc677e196984f8a9820de2020c25, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

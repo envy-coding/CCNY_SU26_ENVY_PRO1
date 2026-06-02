@@ -10,8 +10,10 @@ public class Timer : MonoBehaviour
     public float gameTimer = 20f;
     public GameObject coinPrefab;
     public GameObject player;
+    //public PlayerWASD myWASD:
 
     [SerializeField] public TextMeshProUGUI timerText;
+    //public TextMeshProUGUI scoreText;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
