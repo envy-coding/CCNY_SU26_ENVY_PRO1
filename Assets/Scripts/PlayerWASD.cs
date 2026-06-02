@@ -4,14 +4,14 @@ public class PlayerWASD : MonoBehaviour
 {
     //DECLARE VARIABLES
     //MOVEMENT VARIABLES: SPEED, MOVEMENT
-    float speed;
+    public float speed;
     public KeyCode LeftKey = KeyCode.A;
 	public KeyCode RightKey = KeyCode.D;
 
     //TRANSFORM OF PLAYER 
-	Transform playerTransform;
-	PlayerWASD myScript;
-    Rigidbody2D RB;
+	public Transform playerTransform;
+	public PlayerWASD myScript;
+    public Rigidbody2D RB;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
