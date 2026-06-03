@@ -25,7 +25,7 @@ public class PlayerWASD : MonoBehaviour
     public int score;
 
     void Start()
-    {   scoreText.text = " " + score;
+    {   
         myScript = this; //THIS is a keyword to decribe the scope of the script
 		playerTransform = this.gameObject.transform; //GAMEOBJECT is a property of MONOBEHAVIOR //TRANSFORM is a property of all gameobjects
         RB = gameObject.GetComponent<Rigidbody2D>();
@@ -82,7 +82,7 @@ public class PlayerWASD : MonoBehaviour
        if (collision.gameObject.tag == "Coin")
        {
             Destroy(collision.gameObject);
-      
+            AddScore();
        }
     }
 
@@ -96,4 +96,9 @@ public class PlayerWASD : MonoBehaviour
         grounded = false;
     }
    
+    void AddScore()
+    {
+        scoreText.text = "0" + score;
+        score++;
+    }
 }
