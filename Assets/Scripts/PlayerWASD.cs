@@ -98,7 +98,7 @@ public class PlayerWASD : MonoBehaviour
    
     void AddScore()
     {
-        scoreText.text = "0" + score;
+        scoreText.text = " " + score;
         score++;
     }
 }
