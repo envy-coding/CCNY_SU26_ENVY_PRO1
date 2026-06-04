@@ -14,6 +14,10 @@ public class Timer : MonoBehaviour
 
     [SerializeField] public TextMeshProUGUI timerText;
     //public TextMeshProUGUI scoreText;
+
+    //COIN LIFETIME
+    public float lifetime = 3f;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -45,6 +49,8 @@ public class Timer : MonoBehaviour
                 Debug.Log("Game Over");
             }
         }
+
+        
     }
 }
 

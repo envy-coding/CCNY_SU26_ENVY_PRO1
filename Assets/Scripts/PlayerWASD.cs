@@ -7,18 +7,16 @@ public class PlayerWASD : MonoBehaviour
     
     //MOVEMENT VARIABLES: SPEED, MOVEMENT
     public float speed = 200f;
-    public KeyCode LeftKey = KeyCode.A;
-	public KeyCode RightKey = KeyCode.D;
-
+    
     //TRANSFORM OF PLAYER 
 	public Transform playerTransform;
 	public PlayerWASD myScript;
     public Rigidbody2D RB;
     
     //JUMP VARIABLES
-    public float jumpTimer = 0.3f;
-    public bool grounded;
-    public float jumpForce = 100f;
+    //public float jumpTimer = 0.3f;
+    //public bool grounded;
+    //public float jumpForce = 100f;
 
     //SCORING
     [SerializeField] public TextMeshProUGUI scoreText;
@@ -43,15 +41,7 @@ public class PlayerWASD : MonoBehaviour
 
     void Update()
         {
-            if(Input.GetKey(KeyCode.Space))
-            {   
-                jumpTimer = .1f;
-            }
-
-            if(jumpTimer >= 0f)
-            {
-                jumpTimer -= Time.deltaTime;
-            }
+            
         }
     
     Vector3 Direction()
@@ -65,24 +55,11 @@ public class PlayerWASD : MonoBehaviour
     {
        
         Vector3 direction = Direction();
-        direction.y = 0;
+        //direction.y = 0;
         if(direction != Vector3.zero)
             {
                 RB.linearVelocity = direction * speed * Time.fixedDeltaTime;
             }
-
-        if(jumpTimer > 0f && grounded)
-        {
-            Jump(jumpForce);
-            jumpTimer = 0f;
-        }
-    }
-    
-    
-
-    void Jump(float jumpForce)
-    {
-        RB.AddForce(Vector3.up * jumpForce);
     }
 
     //COINBUMP
@@ -99,16 +76,6 @@ public class PlayerWASD : MonoBehaviour
               TakeDamage(damage);
        }
        
-    }
-
-    void OnCollisionStay2D(Collision2D collision)
-    {
-        grounded = true;
-    }
-
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        grounded = false;
     }
    
     void AddScore()
