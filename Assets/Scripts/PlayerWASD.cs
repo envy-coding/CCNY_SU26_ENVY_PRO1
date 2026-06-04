@@ -24,6 +24,15 @@ public class PlayerWASD : MonoBehaviour
     [SerializeField] public TextMeshProUGUI scoreText;
     public int score;
 
+    //HEALTH
+    public bool isAlive;
+    public int lives = 3;
+
+    //DAMAGE
+    public int damage = 1;
+
+
+
     void Start()
     {   
         myScript = this; //THIS is a keyword to decribe the scope of the script
@@ -77,13 +86,19 @@ public class PlayerWASD : MonoBehaviour
     }
 
     //COINBUMP
-    private void OnCollisionEnter2D(Collision2D collision)
+    public void OnCollisionEnter2D(Collision2D collision)
     {
        if (collision.gameObject.tag == "Coin")
        {
             Destroy(collision.gameObject);
             AddScore();
        }
+
+       if (collision.gameObject.tag == "Enemy")
+       {
+              TakeDamage(damage);
+       }
+       
     }
 
     void OnCollisionStay2D(Collision2D collision)
@@ -100,5 +115,21 @@ public class PlayerWASD : MonoBehaviour
     {
         scoreText.text = " " + score;
         score++;
+    }
+
+    public void Die()
+    {
+        isAlive = false;
+        RB.linearVelocity = Vector2.zero;
+    }
+
+    public void TakeDamage(int damage)
+    {
+        lives -= damage;
+
+        if (lives == 0)
+        {
+            Die();
+        }
     }
 }
