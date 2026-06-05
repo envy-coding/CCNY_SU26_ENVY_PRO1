@@ -65,16 +65,12 @@ public class PlayerWASD : MonoBehaviour
     //COINBUMP
     public void OnCollisionEnter2D(Collision2D collision)
     {
-       if (collision.gameObject.tag == "Coin")
+       if (collision.gameObject.tag == "Enemy")
        {
             Destroy(collision.gameObject);
             AddScore();
        }
 
-       if (collision.gameObject.tag == "Enemy")
-       {
-              TakeDamage(damage);
-       }
        
     }
    

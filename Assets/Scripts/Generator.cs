@@ -7,9 +7,12 @@ float timer = 0;
 public GameObject[] EnemyFish;
 public GameObject BubbleShield;
 public GameObject Player;
-Rigidbody2D rB;
+public Rigidbody2D rB;
 
-Vector3 enemyPosition;
+public float posX;
+public float posY;
+
+public Vector3 enemyPosition;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -22,6 +25,38 @@ Vector3 enemyPosition;
 
     // Update is called once per frame
     void Update()
+    {
+        ChooseSide();
+        Spawn();
+    }
+
+    public void StopSpawning()
+    {
+        if(Player.GetComponent<PlayerWASD>().isAlive == false)
+        {
+            timer = 100f;
+        }
+    }
+
+    public void ChooseSide()
+    {
+        int sideChance = Random.Range(1, 101);
+        
+        
+        
+        if(sideChance <= 50)
+        {
+            posX = -7f;
+        }
+        else
+        {
+            posX = 7f;
+        }
+        
+        
+    }
+
+    public void Spawn()
     {
         if(timer > 0)
         {
@@ -44,31 +79,5 @@ Vector3 enemyPosition;
             }
         
         }
-    }
-
-    public void StopSpawning()
-    {
-        if(Player.GetComponent<PlayerWASD>().isAlive == false)
-        {
-            timer = 100f;
-        }
-    }
-
-    public void ChooseSide()
-    {
-        int sideChance = Random.Range(1, 101);
-        
-        
-        
-        if(sideChance <= 50)
-        {
-            
-        }
-        else
-        {
-          
-        }
-        
-        
     }
 }
