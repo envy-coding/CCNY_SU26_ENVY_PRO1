@@ -2,10 +2,10 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {   
-    public Rigidbody2D rB;
-    public Transform tR;
+    Rigidbody2D rB;
+    Transform tR;
 
-    public float speed;
+    public float speed = 10f;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

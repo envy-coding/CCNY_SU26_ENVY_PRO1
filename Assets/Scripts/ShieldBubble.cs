@@ -28,7 +28,7 @@ public class ShieldBubble : MonoBehaviour
        this.tR.position = new Vector3(x, y, z);
     }
 
-    private void OncollisionEnter2D(Collision2D other)
+    private void OnCollisionEnter2D(Collision2D other)
     {
         if(other.gameObject.CompareTag("Ceiling"))
         {
