@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.AdaptivePerformance;
+using System.Collections.Generic;
 
 public class Generator : MonoBehaviour
 {   //DECLARE VARIABLES
@@ -67,15 +68,9 @@ public Vector3 enemyPosition;
             int chance = Random.Range(1, 101);
             float posY = Random.Range(-5f, 5f);
             float posX = Random.Range(-7,7);
-
-            if(chance <= 20)
-            {
-                Instantiate(EnemyFish[1], new Vector3(posX, posY, 0), new Quaternion(0, 0, 0, 0));
-            }
-            else
-            {
-                Instantiate(EnemyFish[2], new Vector3(posX, posY, 0), new Quaternion(0, 0, 0, 0));
-            }
+           
+            Instantiate(EnemyFish[1], new Vector3(posX, posY, 0), new Quaternion(0, 0, 0, 0));
+        
         
         }
     }

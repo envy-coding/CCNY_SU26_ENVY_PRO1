@@ -35,7 +35,7 @@ public class Timer : MonoBehaviour
         {
             Vector3 pos = new Vector3(Random.Range(-8,8), Random.Range(-4,4), 0);
             
-            Instantiate(coinPrefab, pos, Quaternion.identity);
+            //Instantiate(coinPrefab, pos, Quaternion.identity);
             
             timer = 3f;
         }
