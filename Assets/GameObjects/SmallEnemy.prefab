@@ -193,3 +193,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe47c074c3af53b4d81e622728b605cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WrapScript
+  rB: {fileID: 2443917593257629658}

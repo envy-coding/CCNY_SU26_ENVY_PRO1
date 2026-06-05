@@ -35,7 +35,7 @@ public class ShieldBubble : MonoBehaviour
             Destroy(gameObject);
         }
 
-        if(other.gameObject.CompareTag("Player"))
+        if(gameObject.CompareTag("Player"))
         {
             Destroy(gameObject);
             Shield();

@@ -149,7 +149,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9146249986418904290}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -180,6 +180,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe47c074c3af53b4d81e622728b605cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WrapScript
+  rB: {fileID: -390760873806748649}
 --- !u!114 &1939091467388846171
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -192,4 +193,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 262f3b8f6f0d8904388cf2416cbe2ca9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyMovement
+  enemyRB: {fileID: -390760873806748649}
+  enemyTR: {fileID: 8120691775560162131}
   speed: 10

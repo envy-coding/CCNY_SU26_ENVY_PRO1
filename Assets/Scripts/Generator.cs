@@ -72,8 +72,7 @@ public Vector3 enemyPosition;
             {
                 Instantiate(EnemyFish[1], new Vector3(posX, posY, 0), new Quaternion(0, 0, 0, 0));
             }
-
-            
+            else
             {
                 Instantiate(EnemyFish[2], new Vector3(posX, posY, 0), new Quaternion(0, 0, 0, 0));
             }
