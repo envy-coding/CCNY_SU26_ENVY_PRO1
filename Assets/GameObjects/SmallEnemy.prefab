@@ -153,6 +153,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 262f3b8f6f0d8904388cf2416cbe2ca9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyMovement
+  enemyRB: {fileID: 2443917593257629658}
+  enemyTR: {fileID: 3795307286865182396}
   speed: 10
 --- !u!50 &2443917593257629658
 Rigidbody2D:
@@ -162,7 +164,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4492750689791589621}
-  m_BodyType: 1
+  m_BodyType: 2
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0

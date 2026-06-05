@@ -6,6 +6,7 @@ public class WrapScript : MonoBehaviour
 {
     //DECLARE VARIABLES
     public Rigidbody2D rB;
+    
 
     void Start()
     {
@@ -14,6 +15,11 @@ public class WrapScript : MonoBehaviour
 
     void Update()
     {   
+        Wrap();
+    }
+
+    void Wrap()
+    {
         //DECLARE SCREEN POSITION
         Vector3 screenPosition = Camera.main.WorldToScreenPoint(transform.position); //GET SCREEN POSITION OF OBJECT IN PIXELS
        

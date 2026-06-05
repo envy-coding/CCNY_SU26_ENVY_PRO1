@@ -17,7 +17,7 @@ public class EnemyMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        enemyTR.Translate(Vector3.forward * speed * Time.deltaTime);
+        enemyTR.Translate(Vector3.right * speed * Time.deltaTime);
     }
 
     //void SpeedCheck() //SMALL FISH SLOW BIG FISH FAST

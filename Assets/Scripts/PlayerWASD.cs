@@ -71,9 +71,20 @@ public class PlayerWASD : MonoBehaviour
             AddScore();
        }
 
-       
+       if(collision.gameObject.tag == "Bubble")
+        {
+            Destroy(collision.gameObject);
+        }
     }
-   
+
+    public void On2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "Wall")
+        {
+            RB.linearVelocity = Vector2.zero;
+        }
+    }
+
     void AddScore()
     {
         scoreText.text = " " + score;

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: -5697604190007218815}
   - component: {fileID: 812331899889049994}
   - component: {fileID: -8593068375763820960}
+  - component: {fileID: -1423225977735487822}
   m_Layer: 0
   m_Name: LargeEnemy
   m_TagString: Enemy
@@ -148,7 +149,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2173656120694605808}
-  m_BodyType: 1
+  m_BodyType: 2
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -180,3 +181,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WrapScript
   rB: {fileID: 812331899889049994}
+--- !u!114 &-1423225977735487822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2173656120694605808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 262f3b8f6f0d8904388cf2416cbe2ca9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyMovement
+  enemyRB: {fileID: 812331899889049994}
+  enemyTR: {fileID: 9029625729710933867}
+  speed: 10
