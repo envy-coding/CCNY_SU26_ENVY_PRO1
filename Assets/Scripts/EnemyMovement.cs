@@ -36,4 +36,12 @@ public class EnemyMovement : MonoBehaviour
         //    speed = 3f;
       //  }
     //}
+
+    public void OnCollisionEnter2D(Collision2D collision)
+  {
+    if(collision.gameObject.name == "smallFish")
+    {
+      
+    }
+  }
 }
