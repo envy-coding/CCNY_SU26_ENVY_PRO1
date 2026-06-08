@@ -36,5 +36,11 @@ public class ShieldBubble : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        if(other.gameObject.CompareTag("Enemy"))
+        {
+            Destroy(gameObject);
+            //ADDSCORE
+        }
     }
 }
