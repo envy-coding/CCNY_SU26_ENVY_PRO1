@@ -154,7 +154,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyMovement
   enemyRB: {fileID: 2443917593257629658}
-  enemyTR: {fileID: 3795307286865182396}
+  Player: {fileID: 4088297656465258505, guid: d68c94f538d11f446b0d4333b01af034, type: 3}
+  PlayerAlive: 0
   speed: 10
 --- !u!50 &2443917593257629658
 Rigidbody2D:
@@ -195,4 +196,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe47c074c3af53b4d81e622728b605cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WrapScript
-  rB: {fileID: 2443917593257629658}

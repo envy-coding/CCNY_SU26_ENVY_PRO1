@@ -5,7 +5,7 @@ using UnityEngine;
 public class WrapScript : MonoBehaviour
 {
     //DECLARE VARIABLES
-    public Rigidbody2D rB;
+    private Rigidbody2D rB;
     
 
     void Start()

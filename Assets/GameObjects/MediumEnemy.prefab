@@ -180,7 +180,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe47c074c3af53b4d81e622728b605cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WrapScript
-  rB: {fileID: -390760873806748649}
 --- !u!114 &1939091467388846171
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -194,5 +193,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyMovement
   enemyRB: {fileID: -390760873806748649}
-  enemyTR: {fileID: 8120691775560162131}
+  Player: {fileID: 4088297656465258505, guid: d68c94f538d11f446b0d4333b01af034, type: 3}
+  PlayerAlive: 0
   speed: 10
