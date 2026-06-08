@@ -149,14 +149,14 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9146249986418904290}
-  m_BodyType: 2
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -195,4 +195,7 @@ MonoBehaviour:
   enemyRB: {fileID: -390760873806748649}
   Player: {fileID: 4088297656465258505, guid: d68c94f538d11f446b0d4333b01af034, type: 3}
   PlayerAlive: 0
-  speed: 10
+  speed: 0
+  smallFish: {fileID: 4492750689791589621, guid: c8c964d16d418424e991f30444240492, type: 3}
+  mediumFish: {fileID: 9146249986418904290}
+  largeFish: {fileID: 2173656120694605808, guid: 69adc9ccec8e5964a89c1ff44989a6db, type: 3}
