@@ -256,6 +256,43 @@ RectTransform:
   m_AnchoredPosition: {x: 329.5, y: 216.5}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &130032233 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2118662885279080904, guid: 765961e9334593d4a979a2936e31a8bb, type: 3}
+  m_PrefabInstance: {fileID: 1346238538}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &130032241 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2519333520531224665, guid: 765961e9334593d4a979a2936e31a8bb, type: 3}
+  m_PrefabInstance: {fileID: 1346238538}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &130032242
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 130032233}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &355619758 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1663193623542550661, guid: 0595845bbcfb37c4d99c379656e74375, type: 3}
@@ -335,6 +372,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LargeEnemy
       objectReference: {fileID: 0}
+    - target: {fileID: 2173656120694605808, guid: 69adc9ccec8e5964a89c1ff44989a6db, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9029625729710933867, guid: 69adc9ccec8e5964a89c1ff44989a6db, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.01
@@ -388,6 +429,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -4257577923413970224, guid: d68c94f538d11f446b0d4333b01af034, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2581083464058522790, guid: d68c94f538d11f446b0d4333b01af034, type: 3}
       propertyPath: rB
       value: 
@@ -452,6 +497,10 @@ PrefabInstance:
       propertyPath: speed
       value: 400
       objectReference: {fileID: 0}
+    - target: {fileID: 7773344216517285262, guid: d68c94f538d11f446b0d4333b01af034, type: 3}
+      propertyPath: shield
+      value: 
+      objectReference: {fileID: 1886781841}
     - target: {fileID: 7773344216517285262, guid: d68c94f538d11f446b0d4333b01af034, type: 3}
       propertyPath: scoreText
       value: 
@@ -673,6 +722,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MediumEnemy
       objectReference: {fileID: 0}
+    - target: {fileID: 9146249986418904290, guid: 1466ca1421b95f6489781a74b01cb4ee, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -810,7 +863,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1297707815673611337, guid: 765961e9334593d4a979a2936e31a8bb, type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2118662885279080904, guid: 765961e9334593d4a979a2936e31a8bb, type: 3}
       propertyPath: m_Name
@@ -856,10 +909,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7893828477336665377, guid: 765961e9334593d4a979a2936e31a8bb, type: 3}
+      propertyPath: BubbleShield
+      value: 
+      objectReference: {fileID: 130032233}
+    - target: {fileID: 7893828477336665377, guid: 765961e9334593d4a979a2936e31a8bb, type: 3}
+      propertyPath: bubbleRigidbody
+      value: 
+      objectReference: {fileID: 130032242}
+    - target: {fileID: 7893828477336665377, guid: 765961e9334593d4a979a2936e31a8bb, type: 3}
+      propertyPath: bubbleTransform
+      value: 
+      objectReference: {fileID: 130032241}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2118662885279080904, guid: 765961e9334593d4a979a2936e31a8bb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 130032242}
   m_SourcePrefab: {fileID: 100100000, guid: 765961e9334593d4a979a2936e31a8bb, type: 3}
 --- !u!1 &1387306747
 GameObject:
@@ -1159,6 +1227,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SmallEnemy
       objectReference: {fileID: 0}
+    - target: {fileID: 4492750689791589621, guid: c8c964d16d418424e991f30444240492, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1348,6 +1420,10 @@ PrefabInstance:
     - target: {fileID: 1484636515519748857, guid: 0918780d6d5563c6f9192d2d2986a3e7, type: 3}
       propertyPath: m_Name
       value: SHIELD
+      objectReference: {fileID: 0}
+    - target: {fileID: 1484636515519748857, guid: 0918780d6d5563c6f9192d2d2986a3e7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2600695567343254703, guid: 0918780d6d5563c6f9192d2d2986a3e7, type: 3}
       propertyPath: m_LocalScale.x

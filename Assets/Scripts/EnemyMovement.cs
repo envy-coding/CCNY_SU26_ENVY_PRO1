@@ -4,11 +4,11 @@ using System.Collections;
 public class EnemyMovement : MonoBehaviour
 {   
     public Rigidbody2D enemyRB;
-    //public Transform enemyTR;
     private bool isMoving;
 
     public GameObject Player;
     public bool PlayerAlive;
+    
     public float speed;
     private GameObject smallFish;
     private GameObject mediumFish;
@@ -18,9 +18,9 @@ public class EnemyMovement : MonoBehaviour
     { 
       PlayerAlive = true;
       isMoving = true;
-      //enemyTR = this.gameObject.transform;
+      
       enemyRB = GetComponent<Rigidbody2D>();
-      //enemyTR = GetComponent<Transform>();
+      
       
       smallFish = GameObject.Find("SmallEnemy");  
       mediumFish = GameObject.Find("MediumEnemy");

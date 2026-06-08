@@ -29,10 +29,13 @@ public class PlayerWASD : MonoBehaviour
     //DAMAGE
     public int damage = 1;
 
+    //SHIELD
+    public bool shieldOn;
+    [SerializeField] private GameObject shield;
 
 
     void Start()
-    {   
+    {   shieldOn = false;
         myScript = this; //THIS is a keyword to decribe the scope of the script
 		playerTransform = this.gameObject.transform; //GAMEOBJECT is a property of MONOBEHAVIOR //TRANSFORM is a property of all gameobjects
         RB = gameObject.GetComponent<Rigidbody2D>();
@@ -74,7 +77,16 @@ public class PlayerWASD : MonoBehaviour
        if(collision.gameObject.tag == "Bubble")
         {
             Destroy(collision.gameObject);
+            shield.SetActive(true);
+            shieldOn = true;
+            Invoke("ShieldOff", 3f); //INVOKE SHIELD OFF AFTER 3 SECONDS
         }
+    }
+
+    void ShieldOff()
+    {
+        shield.SetActive(false);
+        shieldOn = false;
     }
 
     public void On2D(Collision2D collision)
