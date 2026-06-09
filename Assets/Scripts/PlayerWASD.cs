@@ -13,6 +13,7 @@ public class PlayerWASD : MonoBehaviour
 	public PlayerWASD myScript;
     public Rigidbody2D RB;
     
+    
     //JUMP VARIABLES
     //public float jumpTimer = 0.3f;
     //public bool grounded;
@@ -32,6 +33,11 @@ public class PlayerWASD : MonoBehaviour
     //SHIELD
     public bool shieldOn;
     [SerializeField] private GameObject shield;
+
+    //FACING LEFT
+    public bool isFacingLeft;
+    public bool spawnFacingLeft;
+    private Vector2 facingLeft;
 
 
     void Start()
