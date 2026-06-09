@@ -46,7 +46,7 @@ public class PlayerWASD : MonoBehaviour
 
     void Update()
     {
-        PlayerSize();  
+        //PlayerSize();  
     
     }
     
@@ -132,21 +132,21 @@ public class PlayerWASD : MonoBehaviour
         }
     }
 
-    public void PlayerSize()
-    {
-        if(score < 3)
-        {
-            player.transform.localScale = new Vector3(1, 1, 0);
-        }
-        if(score < 6)
-        {
-            player.transform.localScale = new Vector3(2, 1, 0);
-    
-        }
-        if(score < 9)
-        {
-            player.transform.localScale = new Vector3(2, 2, 0);
+    //public void PlayerSize()
+    //{
+     //   if(score < 3)
+      //  {
+      //      player.transform.localScale = new Vector3(1, 1, 0);
+       // }
+       // if(score < 6)
+       // {
+     //       player.transform.localScale = new Vector3(2, 1, 0);
+    //
+      //  }
+       // if(score < 9)
+       // {
+ //           player.transform.localScale = new Vector3(2, 2, 0);
 
-        }
+   //     }
     }
-}
+

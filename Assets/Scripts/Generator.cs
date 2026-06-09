@@ -14,24 +14,27 @@ public Rigidbody2D rB;
 public float posX;
 public float posY;
 
-public Vector3 enemyPosition;
+public List<FishArray> fishes;
+
+public int spawnCount;
 
  
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        spawnCount = 5;
         StopSpawning();
         rB = GetComponent<Rigidbody2D>();
         Player = GameObject.Find("Player");
-        enemyPosition = new Vector3(0, 0, 0);
+        //GameObject[] EnemyFish = FishArray.fishes;
+        Spawn();
     }
 
     // Update is called once per frame
     void Update()
     {
-        ChooseSide();
-        Spawn();
+        
     }
 
     public void StopSpawning()
@@ -62,19 +65,17 @@ public Vector3 enemyPosition;
 
     public void Spawn()
     {
-        if(timer > 0)
+        ChooseSide();
+        if(timer > 0 && spawnCount < 5)
         {
             timer -= Time.deltaTime;
         }
         else
         {
-            int chance = Random.Range(1, 101);
-            float posY = Random.Range(-5f, 5f);
-            float posX = Random.Range(-7,7);
-           
-            Instantiate(EnemyFish[1], new Vector3(posX, posY, 0), new Quaternion(0, 0, 0, 0));
-        
-        
+
+            float posY = Random.Range(-4f, 4f);
+    
+            Instantiate(fishes[0], new Vector3(posX, posY, 0), new Quaternion(0, 0, 0, 0));    
         }
     }
 }

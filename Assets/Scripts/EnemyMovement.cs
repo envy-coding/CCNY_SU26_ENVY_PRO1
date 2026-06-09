@@ -27,7 +27,7 @@ public class EnemyMovement : MonoBehaviour
       mediumFish = GameObject.Find("MediumEnemy");
       largeFish = GameObject.Find("LargeFish");
 
-      
+
     }
 
     // Update is called once per frame
