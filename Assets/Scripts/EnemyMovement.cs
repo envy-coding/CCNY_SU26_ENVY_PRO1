@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using Unity.VisualScripting;
 
 public class EnemyMovement : MonoBehaviour
 {   
@@ -25,6 +26,8 @@ public class EnemyMovement : MonoBehaviour
       smallFish = GameObject.Find("SmallEnemy");  
       mediumFish = GameObject.Find("MediumEnemy");
       largeFish = GameObject.Find("LargeFish");
+
+      
     }
 
     // Update is called once per frame
@@ -68,5 +71,56 @@ public class EnemyMovement : MonoBehaviour
       {
         PlayerAlive = false;
       }
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (this.gameObject == smallFish)
+        {
+          if(collision.gameObject == smallFish)
+          {
+            Destroy(collision.gameObject);
+          }
+          if(collision.gameObject == mediumFish)
+          {
+            Destroy(this.gameObject);
+          }
+          if(collision.gameObject == largeFish)
+          {
+            Destroy(this.gameObject);
+          }
+        }
+        
+        if (this.gameObject == mediumFish)
+        {
+          if(collision.gameObject == smallFish)
+          {
+            Destroy(collision.gameObject);
+          }
+          if(collision.gameObject == mediumFish)
+          {
+            Destroy(collision.gameObject);
+          }
+          if(collision.gameObject == largeFish)
+          {
+            Destroy(this.gameObject);
+          }
+        }
+        
+        if (this.gameObject == largeFish)
+        {
+          if(collision.gameObject == smallFish)
+          {
+            Destroy(collision.gameObject);
+          }
+          if(collision.gameObject == mediumFish)
+          {
+            Destroy(collision.gameObject);
+          }
+          if(collision.gameObject == largeFish)
+          {
+            Destroy(collision.gameObject);
+          }
+        }
     }
 }

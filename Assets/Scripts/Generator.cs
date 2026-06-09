@@ -6,6 +6,7 @@ public class Generator : MonoBehaviour
 {   //DECLARE VARIABLES
 float timer = 0;
 public GameObject[] EnemyFish;
+
 public GameObject BubbleShield;
 public GameObject Player;
 public Rigidbody2D rB;
@@ -14,6 +15,8 @@ public float posX;
 public float posY;
 
 public Vector3 enemyPosition;
+
+ 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

@@ -1,16 +1,22 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class FishArray : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public int[] fishes;
+
     void Start()
     {
-        
+        Shuffle(fishes);
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public void Shuffle(int[] a)
+    {   
+        for (int i = a.Length-1; i > 0; i--)
+        {
+            int random = Random.Range(0,1);
+            int temp = a[i];
+            a[i] = a[random];
+            a[random] = temp;
+        }
     }
 }

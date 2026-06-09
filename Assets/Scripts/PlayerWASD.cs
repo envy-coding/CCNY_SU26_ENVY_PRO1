@@ -11,7 +11,9 @@ public class PlayerWASD : MonoBehaviour
     //TRANSFORM OF PLAYER 
 	public Transform playerTransform;
 	public PlayerWASD myScript;
-    public Rigidbody2D RB;
+     Rigidbody2D RB;
+     Collider2D coll;
+     GameObject player;
     
     
     //JUMP VARIABLES
@@ -34,41 +36,46 @@ public class PlayerWASD : MonoBehaviour
     public bool shieldOn;
     [SerializeField] private GameObject shield;
 
-    //FACING LEFT
-    public bool isFacingLeft;
-    public bool spawnFacingLeft;
-    private Vector2 facingLeft;
+   
 
 
     void Start()
-    {   shieldOn = false;
-        myScript = this; //THIS is a keyword to decribe the scope of the script
-		playerTransform = this.gameObject.transform; //GAMEOBJECT is a property of MONOBEHAVIOR //TRANSFORM is a property of all gameobjects
-        RB = gameObject.GetComponent<Rigidbody2D>();
-       
+    {  
+       Initialization();
     }
 
     void Update()
-        {
-            
-        }
+    {
+        PlayerSize();  
     
-    Vector3 Direction()
+    }
+    
+    public Vector3 Direction()
         {
             float horizontal = Input.GetAxis("Horizontal");
             float vertical = Input.GetAxis("Vertical");
+            
             return new Vector3(horizontal, vertical, 0);
         }
     
+    void Initialization()
+    {
+        shieldOn = false;
+        myScript = this; //THIS is a keyword to decribe the scope of the script
+		playerTransform = this.gameObject.transform; //GAMEOBJECT is a property of MONOBEHAVIOR //TRANSFORM is a property of all gameobjects
+        RB = gameObject.GetComponent<Rigidbody2D>();
+        coll = gameObject.GetComponent<Collider2D>();
+        
+    }
     void FixedUpdate() //FOR PHYSICS ENGINE
     {
-       
         Vector3 direction = Direction();
         //direction.y = 0;
         if(direction != Vector3.zero)
             {
                 RB.linearVelocity = direction * speed * Time.fixedDeltaTime;
             }
+
     }
 
     //COINBUMP
@@ -103,7 +110,7 @@ public class PlayerWASD : MonoBehaviour
         }
     }
 
-    void AddScore()
+    public void AddScore()
     {
         scoreText.text = " " + score;
         score++;
@@ -122,6 +129,24 @@ public class PlayerWASD : MonoBehaviour
         if (lives == 0)
         {
             Die();
+        }
+    }
+
+    public void PlayerSize()
+    {
+        if(score < 3)
+        {
+            player.transform.localScale = new Vector3(1, 1, 0);
+        }
+        if(score < 6)
+        {
+            player.transform.localScale = new Vector3(2, 1, 0);
+    
+        }
+        if(score < 9)
+        {
+            player.transform.localScale = new Vector3(2, 2, 0);
+
         }
     }
 }
