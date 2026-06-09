@@ -1,5 +1,7 @@
 using System;
 using System.Collections;
+using System.Xml.Serialization;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -8,10 +10,19 @@ public class GameManager : MonoBehaviour
 
     public GameState state;
     public static event Action<GameState> OnGameStateChanged;
+    public PlayerController Player;
+    public EnemyController Enemy;
 
-    void Awake()
+    private void Awake()
     {
+        if (Instance != null && Instance != null)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
         Instance = this;
+        //DontDestroyOnLoad(gameObject);
     }
 
     void Start()
@@ -19,7 +30,16 @@ public class GameManager : MonoBehaviour
         UpdateGameState(GameState.StartMenu);
     }
 
-    
+    public void RegisterPlayer(PlayerController player)
+    {
+        Player = player;
+    }
+
+    public void RegisterEnemy(EnemyController enemy)
+    {
+        Enemy = enemy;
+    }
+
     public void UpdateGameState(GameState newState)
         {
             state = newState; 

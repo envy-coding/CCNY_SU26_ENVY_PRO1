@@ -26,7 +26,7 @@ public int spawnCount;
         spawnCount = 5;
         StopSpawning();
         rB = GetComponent<Rigidbody2D>();
-        Player = GameObject.Find("Player");
+        Player = GameObject.Find("PLAYER");
         //GameObject[] EnemyFish = FishArray.fishes;
         Spawn();
     }
@@ -69,13 +69,12 @@ public int spawnCount;
         if(timer > 0 && spawnCount < 5)
         {
             timer -= Time.deltaTime;
+            float posY = Random.Range(-4f, 4f);
+            Instantiate(fishes[0], new Vector3(posX, posY, 0), new Quaternion(0, 0, 0, 0));    
         }
         else
         {
-
-            float posY = Random.Range(-4f, 4f);
-    
-            Instantiate(fishes[0], new Vector3(posX, posY, 0), new Quaternion(0, 0, 0, 0));    
+            StopSpawning();
         }
     }
 }
